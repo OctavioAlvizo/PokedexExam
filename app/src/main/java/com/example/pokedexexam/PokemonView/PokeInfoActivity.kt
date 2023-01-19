@@ -1,5 +1,6 @@
 package com.example.pokedexexam.PokemonView;
 
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -10,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_pokeinfo.*
 
 class PokeInfoActivity : AppCompatActivity() {
 
-    lateinit var viewModel: PokeInfoViewModel
+    private lateinit var viewModel: PokeInfoViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +23,7 @@ class PokeInfoActivity : AppCompatActivity() {
     }
 
     private fun initUI(){
+
         val id = intent.extras?.get("golbat") as String
 
         viewModel.getPokemonInfo(id)
